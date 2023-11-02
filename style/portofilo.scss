@@ -1,0 +1,242 @@
+@import "./mixins";
+*{
+    font-family: 'Inconsolata', sans-serif;
+}
+   
+body{
+    background-color: #1F1E1B;
+}
+#header{
+    display: flex;
+    justify-content: space-around;
+
+    
+   @include tablet{
+   display: flex;
+   flex-direction: column;
+
+   }
+
+    @include mobile{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        
+      
+    } 
+   
+   .img__logo{
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   
+   @include tablet{
+    text-align: center;
+   }
+  @include mobile{
+    justify-content: start;
+  }
+  
+}
+  
+   
+    .navigation{
+       
+        @include mobile{
+            display: none ;
+        }
+        .navigation__list{
+            cursor: pointer;
+            display: flex;
+             gap: 30px;
+            justify-content: space-around;
+            color: #F0E3CA;
+            list-style-type: none;
+            :nth-child(1){
+                color: #FF8303;
+          
+            }
+           
+        }
+       
+            
+        }
+        .burger{
+            display: none;
+            @include mobile{
+   
+                display: block;
+               
+            }
+           }
+       
+    }
+   
+    
+
+#main{
+    @include tablet{
+        display: flex;
+        flex-direction: column;
+
+    }
+    .container{
+        @include tablet{
+            display: flex;
+            flex-direction: column;
+    
+        }
+      display: flex;
+      margin-top: 50px;
+      justify-content: space-between;
+      
+      &__title{
+        font-size: 20px;
+        text-align: center;
+        margin-top: 15%;
+       width: 100%;
+       color: #F0E3CA;
+       :nth-child(1){
+        color: #FF8303;
+       }
+      }
+
+      &__img{
+        width: 100%;
+        img{
+            @include mobile{
+                width: 100%;
+            }
+        }
+       
+      }
+
+    }
+    .container__text{
+        display: flex;
+        justify-content: center;
+        p{
+            color: #F0E3CA;
+            margin-left: 5%;
+            letter-spacing: 2px;
+        }
+    }
+
+    .skills{
+
+        h1{
+            text-align: center;
+            color: #FF8303;
+        }
+        .skills__img{
+            @include tablet{
+                
+                flex-wrap: wrap;
+            }
+            @include mobile{
+                display: flex;
+                flex-direction: column;
+                flex-wrap: wrap;
+
+            }
+            
+            margin-top: 5%;
+            display: flex;
+            justify-content: space-evenly ;
+            div{
+                @include mobile{
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    margin-top: 10%;
+                }
+
+                img{
+                    @include mobile{
+                        height: 42px;
+                    }
+
+                }
+                
+               
+                p{
+                    color: #FFF;
+                    text-align: center;
+                    cursor: pointer;
+                }
+            }
+        }
+
+    }
+
+    .works{
+        h1{
+            text-align: center;
+            color: #FF8303;
+        }
+       &__img{
+        @include tablet{
+           display: flex;
+           flex-direction: column;
+    
+        }
+        margin-top: 5%;
+        display: flex;
+        justify-content: space-evenly;
+    }
+       }
+    
+    }
+
+    #footer{
+
+        @include tablet{
+            display: flex;
+            flex-direction: column;
+            text-align: center;
+        }
+       align-items: center;
+        margin-top: 10%;
+        display: flex;
+        justify-content: space-evenly;
+        .ontalex{
+
+            p{
+                color: #F0E3CA;
+            }
+
+        }
+
+        .contacts{
+            h1{
+                color: #FF8303;
+            }
+            .contacts__list{
+              
+                .contacts__list-item{
+                    
+                    @include mobile{
+                        display: flex;
+                        flex-direction: column;
+                        text-align: center;
+                        line-height:75px;
+                        
+                    } 
+                    @include tablet{
+                        display: flex;
+                        justify-content: space-evenly;
+                    }
+                    
+                 
+                    display: flex;
+                    span{
+                        color: #FF8303;
+                      }
+                }
+                
+               
+            }
+        }
+
+    }
+
